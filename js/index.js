@@ -1,7 +1,7 @@
 // import
-import { addTodo, displayTodo, removeTodo } from '/js/todo.js'
-import { changeTheme } from '/js/theme.js'
-import { updateCategory } from '/js/category.js'
+import { addTodo, displayTodo, removeTodo } from '/oh-my-todo/js/todo.js'
+import { changeTheme } from '/oh-my-todo/js/theme.js'
+import { updateCategory } from '/oh-my-todo/js/category.js'
 
 // event listener
 addToDoBtn.addEventListener('click', addTodo)
