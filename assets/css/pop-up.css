@@ -1,0 +1,33 @@
+body:has(#popUp #remindMeDetail:checked) #popUp .calendar {
+	height: max-content;
+	padding: var(--padding-xs);
+	opacity: 1;
+}
+
+#popUp {
+	position: fixed;
+	z-index: 99999;
+	inset: 0;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	padding-top: var(--padding-xl);
+	background: var(--bg-topbar);
+	backdrop-filter: blur(0.3rem);
+	display: none;
+
+	.input-todo {
+		margin: 0;
+		padding: var(--padding-l);
+		background: var(--bg-card);
+		border-radius: var(--border-radius-5xl);
+		border: 0.1rem solid color-mix(in oklab, var(--clr-text-disable) 15%, transparent);
+		width: 90%;
+		max-width: var(--max-width);
+
+		.wrapper textarea {
+			max-height: calc((var(--sz-menu) * 6) + (var(--padding-s)) + var(--gap-xs));
+		}
+	}
+}

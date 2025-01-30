@@ -1,0 +1,65 @@
+:root {
+	interpolate-size: allow-keywords;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	transition:
+		background var(--duration-transition-xs) ease,
+		color var(--duration-transition-xs) ease,
+		opacity var(--duration-transition-xs) ease,
+		box-shadow var(--duration-transition-xs) ease;
+}
+
+html,
+body,
+body > * {
+	scroll-behavior: smooth;
+}
+
+*:focus:not(input:is([type='checkbox'], [type='radio'])) {
+	outline: 0.1rem solid var(--clr-focus);
+}
+
+input {
+	accent-color: var(--clr-accent-secondary);
+}
+
+textarea,
+select,
+input {
+	field-sizing: content;
+}
+
+select,
+input,
+button {
+	border: none;
+	background: transparent;
+}
+
+button,
+[role='button'] {
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+	font-size: inherit;
+}
+
+img,
+video {
+	display: block;
+}
+
+.hidden {
+	display: hidden !important;
+}
+
+ul[class] {
+	list-style: none;
+}

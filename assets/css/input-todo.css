@@ -1,0 +1,168 @@
+.input-todo {
+	z-index: 1;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: var(--padding-xl);
+	border-top-left-radius: var(--border-radius-5xl);
+	border-top-right-radius: var(--border-radius-5xl);
+	background: var(--bg-topbar);
+	backdrop-filter: blur(0.5rem);
+	margin-top: calc(var(--border-radius-5xl) * -1);
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap-s);
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: stretch;
+		gap: var(--gap-s);
+		max-width: 100%;
+
+		> * {
+			background: var(--bg-topbar);
+			backdrop-filter: blur(0.25rem);
+			border-radius: var(--border-radius-l);
+			box-shadow:
+				-0.2rem -0.2rem 0.2rem var(--highlight),
+				0.2rem 0.2rem 0.2rem var(--shadow);
+
+			&:is([type='text']) {
+				height: var(--sz-menu);
+				text-overflow: ellipsis;
+				padding-inline: var(--padding-m);
+				width: 100%;
+				padding: var(--padding-l);
+			}
+
+			&:is(textarea) {
+				text-overflow: ellipsis;
+				border: none;
+				width: 100%;
+				max-width: calc(100% - var(--sz-menu) - var(--gap-s));
+				height: auto;
+				max-height: calc((var(--sz-menu) * 2) + (var(--padding-s)) + var(--gap-xs));
+				padding: var(--padding-s) var(--padding-l);
+				overflow: auto;
+			}
+
+			&:is(button) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: var(--gap-xs);
+				min-height: var(--sz-menu);
+				height: auto;
+				min-width: var(--sz-menu);
+			}
+
+			&:has(select) {
+				position: relative;
+				padding-inline: var(--padding-m);
+
+				:is(select) {
+					position: absolute;
+					display: block;
+					inset: 0;
+					overflow: hidden;
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.remind-me {
+		transition-duration: var(--duration-transition-xs);
+		display: flex;
+		gap: var(--gap-s);
+		width: max-content;
+		padding: var(--padding-xs) var(--padding-s);
+		margin-top: var(--margin-s);
+		border-radius: var(--border-radius-m);
+		background: var(--bg-topbar);
+		box-shadow:
+			-0.2rem -0.2rem 0.2rem var(--highlight),
+			0.2rem 0.2rem 0.2rem var(--shadow);
+
+		&:has(:checked) {
+			background: transparent;
+			box-shadow: none;
+		}
+	}
+}
+
+body:has(header #remindMe:checked) header .calendar {
+	height: max-content;
+	padding: var(--padding-xs);
+	padding-bottom: 10vh;
+	opacity: 1;
+}
+
+.calendar {
+	display: flex;
+	flex-direction: column;
+	height: 0px;
+	padding: 0px;
+	opacity: 0;
+	overflow: hidden;
+	transition:
+		padding var(--duration-transition-xs) ease,
+		height var(--duration-transition-xs) ease,
+		opacity var(--duration-transition-xs) ease;
+
+	div:has(.month, .year) {
+		display: flex;
+		justify-content: flex-end;
+		color: var(--clr-accent-secondary);
+		gap: var(--gap-xs);
+		padding-right: var(--margin-xxl);
+		margin-bottom: var(--margin-xs);
+
+		.year {
+			font-weight: bold;
+		}
+	}
+
+	.dates,
+	.weeks {
+		padding: var(--padding-xs);
+		display: grid;
+		column-gap: var(--gap-s);
+		grid-template-columns: repeat(7, calc((100% - (var(--padding-xs) * 2) - (var(--gap-s) * 6)) / 7));
+		place-content: center;
+		place-items: center;
+		font-size: 0.75em;
+
+		&:is(.dates) {
+			border-top: 0.1rem solid var(--clr-accent-secondary);
+			font-size: 0.9em;
+		}
+
+		.date {
+			color: color-mix(in oklab, var(--clr-text-disable) 25%, transparent);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			aspect-ratio: 1;
+			border-radius: var(--border-radius-o);
+			transition-duration: var(--duration-transition-xxs);
+
+			&.this-month {
+				color: var(--clr-text-disable);
+			}
+
+			&:has(:checked) {
+				color: var(--clr-accent-secondary);
+				outline: 0.1rem solid var(--clr-focus);
+				box-shadow:
+					-0.2rem -0.2rem 0.2rem var(--highlight),
+					0.2rem 0.2rem 0.2rem var(--shadow);
+			}
+		}
+	}
+}
