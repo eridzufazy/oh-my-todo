@@ -1,0 +1,38 @@
+@keyframes fade-in-block {
+	0% {
+		opacity: 0;
+		margin-block: 2rem;
+	}
+	100% {
+		opacity: 1;
+		margin-block: var(--__margin);
+	}
+}
+
+@keyframes fade-in-inline {
+	0% {
+		opacity: 0;
+		margin-inline: 2rem;
+	}
+	100% {
+		opacity: 1;
+		margin-inline: 0rem;
+	}
+}
+
+@keyframes fade-in-new-item {
+	0% {
+		opacity: 0;
+		height: 0;
+		margin-block: var(--__margin);
+	}
+	50% {
+		margin-block: 2rem;
+	}
+	100% {
+		padding: var(--__padding);
+		opacity: 1;
+		height: auto;
+		margin-block: var(--__margin);
+	}
+}

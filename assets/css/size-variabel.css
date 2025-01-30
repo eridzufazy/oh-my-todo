@@ -1,0 +1,85 @@
+:root {
+	--padding-xxs: calc(1rem * 0.25);
+	--padding-xs: calc(1rem * 0.5);
+	--padding-s: calc(1rem * 0.75);
+	--padding-m: calc(1rem * 1);
+	--padding-l: calc(1rem * 1.25);
+	--padding-xl: calc(1rem * 1.5);
+	--padding-xxl: calc(1rem * 1.75);
+	--padding-3xl: calc(var(--padding-xxl) + var(--padding-xxs));
+	--padding-4xl: calc(var(--padding-xxl) + var(--padding-xs));
+	--padding-5xl: calc(var(--padding-xxl) + var(--padding-s));
+	--padding-6xl: calc(var(--padding-xxl) + var(--padding-m));
+	--padding-7xl: calc(var(--padding-xxl) + var(--padding-l));
+	--padding-8xl: calc(var(--padding-xxl) + var(--padding-xl));
+	--padding-9xl: calc(var(--padding-xxl) + var(--padding-xxl));
+
+	--margin-xxs: calc(1rem * 0.25);
+	--margin-xs: calc(1rem * 0.5);
+	--margin-s: calc(1rem * 0.75);
+	--margin-m: calc(1rem * 1);
+	--margin-l: calc(1rem * 1.25);
+	--margin-xl: calc(1rem * 1.5);
+	--margin-xxl: calc(1rem * 1.75);
+	--margin-3xl: calc(var(--margin-xxl) + var(--padding-xxs));
+	--margin-4xl: calc(var(--margin-xxl) + var(--padding-xs));
+	--margin-5xl: calc(var(--margin-xxl) + var(--padding-s));
+	--margin-6xl: calc(var(--margin-xxl) + var(--padding-m));
+	--margin-7xl: calc(var(--margin-xxl) + var(--padding-l));
+	--margin-8xl: calc(var(--margin-xxl) + var(--padding-xl));
+	--margin-9xl: calc(var(--margin-xxl) + var(--padding-xxl));
+
+	--gap-xxs: calc(1rem * 0.25);
+	--gap-xs: calc(1rem * 0.5);
+	--gap-s: calc(1rem * 0.75);
+	--gap-m: calc(1rem * 1);
+	--gap-l: calc(1rem * 1.25);
+	--gap-xl: calc(1rem * 1.5);
+	--gap-xxl: calc(1rem * 1.75);
+	--gap-3xl: calc(var(--gap-xxl) + var(--gap-xxs));
+	--gap-4xl: calc(var(--gap-xxl) + var(--gap-xs));
+	--gap-5xl: calc(var(--gap-xxl) + var(--gap-s));
+	--gap-6xl: calc(var(--gap-xxl) + var(--gap-m));
+	--gap-7xl: calc(var(--gap-xxl) + var(--gap-l));
+	--gap-8xl: calc(var(--gap-xxl) + var(--gap-xl));
+	--gap-9xl: calc(var(--gap-xxl) + var(--gap-xxl));
+
+	--border-radius-xxs: calc(1rem * 0.4);
+	--border-radius-xs: calc(1rem * 0.5);
+	--border-radius-s: calc(1rem * 0.6);
+	--border-radius-m: calc(1rem * 0.75);
+	--border-radius-l: calc(1rem * 0.9);
+	--border-radius-xl: calc(1rem * 1.05);
+	--border-radius-xxl: calc(1rem * 1.2);
+	--border-radius-3xl: calc(var(--border-radius-xxl) + var(--border-radius-xxs));
+	--border-radius-4xl: calc(var(--border-radius-xxl) + var(--border-radius-xs));
+	--border-radius-5xl: calc(var(--border-radius-xxl) + var(--border-radius-s));
+	--border-radius-6xl: calc(var(--border-radius-xxl) + var(--border-radius-m));
+	--border-radius-7xl: calc(var(--border-radius-xxl) + var(--border-radius-l));
+	--border-radius-8xl: calc(var(--border-radius-xxl) + var(--border-radius-xxl));
+	--border-radius-8xl: calc(var(--border-radius-xxl) + var(--border-radius-xxl));
+	--border-radius-o: 50%;
+
+	--duration-transition-xxs: 0.25s;
+	--duration-transition-xs: 0.5s;
+	--duration-transition-s: 1s;
+	--duration-transition-m: 1.5s;
+	--duration-transition-l: 2s;
+	--duration-transition-xl: 2.5s;
+	--duration-transition-xxl: 3s;
+
+	--duration-animation-xxs: 0.25s;
+	--duration-animation-xs: 0.5s;
+	--duration-animation-s: 1s;
+	--duration-animation-m: 1.5s;
+	--duration-animation-l: 2s;
+	--duration-animation-xl: 2.5s;
+	--duration-animation-xxl: 3s;
+}
+
+:root {
+	--width-side-bar: 13.5rem;
+	--sz-menu: calc(1.5rem + var(--padding-xs) * 2);
+	--width-card-item: 22rem;
+	--max-width: 500px;
+}

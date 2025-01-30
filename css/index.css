@@ -1,0 +1,27 @@
+@import url(../assets/css/root.css);
+@import url(banner-top.css);
+@import url(input-todo.css);
+@import url(todo-list.css);
+@import url(pop-up.css);
+
+body {
+	background: var(--bg-main);
+	color: var(--clr-text);
+}
+
+.container {
+	max-width: var(--max-width);
+	margin-inline: auto;
+}
+
+footer {
+	z-index: 3;
+	position: relative;
+	bottom: 0;
+	height: var(--sz-menu);
+	max-height: var(--sz-menu);
+	padding: var(--padding-s);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

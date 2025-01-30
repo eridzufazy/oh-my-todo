@@ -1,0 +1,33 @@
+:root {
+	color-scheme: dark;
+
+	--clr-base: light-dark(hsl(222, 47%, 100%), hsl(222, 47%, 11%));
+	--clr-accent: light-dark(hsl(217, 100%, 64%), hsl(217, 100%, 54%));
+	--clr-accent-secondary: light-dark(red, red);
+	--clr-accent-secondary: light-dark(hsl(40, 100%, 64%), hsl(40, 85%, 45%));
+	--clr-focus: color-mix(in oklab, var(--clr-accent-secondary) 60%, transparent);
+	--clr-line: light-dark(
+		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 90%, var(--clr-accent)) 90%, black),
+		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 90%, var(--clr-accent)) 90%, white)
+	);
+	--clr-shadow: light-dark(hsl(222, 25%, 70%), hsl(222, 50%, 20%));
+
+	--clr-error: light-dark(hsl(5, 100%, 49%), hsl(5, 100%, 54%));
+	--clr-warning: light-dark(hsl(60, 100%, 49%), hsl(60, 100%, 54%));
+	--clr-success: light-dark(hsl(100, 100%, 49%), hsl(100, 100%, 54%));
+
+	--clr-text: light-dark(hsl(210, 0%, 35%), hsl(210, 0%, 65%));
+	--clr-text-disable: color-mix(in oklab, var(--clr-text) 60%, transparent);
+
+	--bg-main: light-dark(color-mix(in oklab, var(--clr-base) 95%, black), color-mix(in oklab, var(--clr-base) 65%, color-mix(in oklab, var(--clr-accent) 20%, black)));
+	--bg-topbar: light-dark(color-mix(in oklab, var(--bg-main) 35%, transparent), color-mix(in oklab, var(--bg-main) 35%, transparent));
+	--bg-sidebar: light-dark(
+		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 95%, var(--clr-accent)) 65%, transparent),
+		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 95%, var(--clr-accent)) 70%, transparent)
+	);
+	--bg-card: light-dark(color-mix(in oklab, var(--clr-base) 99%, var(--clr-accent)), color-mix(in oklab, var(--clr-base) 95%, white));
+	--bg-btn: var(--clr-accent);
+	--bg-btn-disable: color-mix(in oklab, var(--clr-accent) 40%, var(--bg-card));
+	--highlight: light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.15));
+	--shadow: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85));
+}

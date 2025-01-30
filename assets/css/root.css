@@ -1,0 +1,55 @@
+@import url(reset.css);
+@import url(size-variabel.css);
+@import url(color-variabel.css);
+@import url(keyframes.css);
+@import url(fontawsome.all.css);
+
+*,
+*::after,
+*::before {
+	/* 
+	border: 0.2px solid red !important;
+  */
+	font-family: inherit;
+}
+
+* {
+	font-family: 'Poppins';
+}
+
+main {
+	background-attachment: fixed;
+	min-height: 100vh;
+	padding-block: var(--padding-m);
+}
+
+::-webkit-scrollbar {
+	height: var(--padding-xxs);
+	width: var(--padding-xxs);
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: var(--border-radius-xxs);
+	background: var(--clr-accent-secondary);
+}
+
+@media (max-width: 400px) {
+	:root {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 300px) {
+	:root {
+		font-size: 0.7rem;
+	}
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../fonts/Poppins-Light.ttf);
+}

@@ -1,0 +1,25 @@
+#popUp {
+	z-index: 999;
+	position: fixed;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--bg-topbar);
+	backdrop-filter: blur(0.2rem);
+	display: none;
+
+	.input-todo {
+		width: 90%;
+		padding: var(--padding-l);
+		background: var(--bg-card);
+		border-radius: var(--border-radius-5xl);
+		border: 0.1rem solid color-mix(in oklab, var(--clr-text-disable) 15%, transparent);
+	}
+}
+
+body:has(#popUp #remindMeDetail:checked) #popUp .calendar {
+	height: max-content;
+	padding: var(--padding-xs);
+	opacity: 1;
+}
