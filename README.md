@@ -1,58 +1,60 @@
-# 📝 Oh My Todo
+# 📝 Oh My Todo - Template Website To-Do List
 
-Oh My Todo adalah aplikasi **To-Do List** berbasis web yang sederhana namun stylish! Dibangun dengan **HTML, CSS, dan JavaScript**, aplikasi ini dirancang untuk membantu kamu mengelola tugas sehari-hari dengan tampilan yang bersih dan modern.
+**Oh My To-Do** adalah template **website to-do list open-source** berbasis HTML, CSS, dan JavaScript.
 
-## 🚀 Demo
+- Responsif, ringan, tanpa framework, dan bisa langsung digunakan.
+- Menyimpan tugas dengan LocalStorage, mendukung tema Dark & Light, serta kategori tugas.
+- Cocok untuk developer pemula maupun profesional yang ingin membuat aplikasi to-do list modern.
 
-Coba langsung aplikasi ini di browser kamu:  
-🔗 [Oh My Todo - Live Demo](https://eridz.github.io/oh-my-todo/)
+<br />
 
-## 📌 Fitur Utama
+## 🚀 **Demo & Live Preview**
 
-✅ **Menambahkan , mengedit & Menghapus Tugas** - Buat daftar tugas dengan mudah.  
-✅ **Kategori Tugas** - Pisahkan tugas berdasarkan kategori.  
-✅ **Tema Dark & Light** - Sesuaikan tampilan sesuai preferensimu.  
-✅ **Animasi Smooth** - Transisi yang halus untuk pengalaman yang lebih nyaman.
+🔗 [Lihat Demo di Sini](https://eridz.github.io/oh-my-todo/)
 
-## ⚡ Teknologi yang Digunakan
+<!--![Oh My Todo](https://eridz.github.io/oh-my-todo/screenshot/banner.jpg)-->
 
-🟢 **HTML** - Struktur halaman aplikasi  
-🔵 **CSS** - Styling dan animasi tampilan  
-🟡 **JavaScript** - Interaksi dan fitur utama aplikasi
+![Oh My Todo](./screenshot/banner.jpg)
 
-## 🛠️ Cara Menjalankan Proyek
+<br />
 
-1. **Clone repository ini**
+## ✨ **Fitur utama:**
 
-```bash
-git clone https://github.com/eridz/oh-my-todo.git
+- Template siap pakai
+- Desain responsif (Mobile-Friendly)
+- Penyimpanan dengan `localStorage`
+- Tanpa framework (murni `HTML`, `CSS`, `JavaScript`)
+- Menambahkan, mengedit & Menghapus Tugas
+- Kategori Tugas
+- Tema Dark & Light
+- Animasi Smooth
+- Tema mudah dikustomisasi (`assets > css > color-variabel.css`)
+
+<br />
+
+## 📥 **Download & Install**
+
+### **1. Clone Repository**
+
+```sh
+  git clone https://github.com/eridz/oh-my-todo.git
 ```
 
-## 🚀 Cara Berkontribusi
+atau download sebagai [ZIP](https://github.com/eridz/oh-my-todo/archive/refs/heads/main.zip) dari GitHub.
 
-Mau berkontribusi untuk meningkatkan proyek ini? Ikuti langkah-langkah berikut:
+### **2. Buka folder di kode editor**
 
-1. **Fork repository ini.**
-
-2. **Buat `branch` baru untuk fitur yang ingin ditambahkan:**
-
-```bash
-git checkout -b fitur-baru
+```sh
+  code oh-my-todo
 ```
 
-3. **Lakukan perubahan dan `commit`:**
+atau jika kalian pakai [Acode Editor](https://acode.app/) di Android
 
-```bash
-git commit -m "Menambahkan fitur baru"
+```sh
+  acode oh-my-todo
 ```
 
-4. **Push ke repository `fork`:**
-
-```bash
-git push origin fitur-baru
-```
-
-5. **Buat `Pull` Request ke `branch` utama (main) dari repository ini.**
+<br />
 
 ## 📁 Struktur Folder
 
@@ -62,26 +64,74 @@ oh-my-todo/
 │   ├── css/        # File CSS untuk styling
 │   ├── fonts/      # Font yang digunakan dalam aplikasi
 │   ├── images/     # Gambar dan ikon
-│   L── js/         # File JavaScript utama
+│   └── js/         # File JavaScript utama
+│
 ├── index.html      # Halaman utama aplikasi
 ├── LICENSE         # Lisensi proyek
 └── README.md       # Dokumentasi proyek
 ```
 
+<br />
+
+## 🛠 Cara Menggunakan
+
+**Tambahkan Tugas Baru**
+
+- Ketik tugas di input box
+- Tekan tombol ➕ untuk menambah tugas
+
+**Simpan tugas di LocalStorage**
+
+- Tugas akan tersimpan, meskipun halaman direfresh tidak akan hilang
+
+**Tandai Tugas Selesai**
+
+- Klik checkbox ✅ untuk menandai tugas sebagai selesai
+
+**Edit Tugas**
+
+- Klik ikon pencil 🖊️ untuk mengedit tugas, lalu tekan **Save**
+
+**Hapus Tugas**
+
+- Klik ikon 🗑 untuk menghapus tugas dari daftar
+
+<br />
+
+## 🔍 Teknologi yang Digunakan
+
+- **HTML5** → Struktur halaman
+
+- **CSS3** → Styling & layout
+
+- **JavaScript (Vanilla JS)** → Logika aplikasi
+
+- **LocalStorage API** → Penyimpanan tugas
+
+<br />
+
+## 🏆 Kenapa Memilih Oh My Todo?
+
+- **Cepat & Ringan** → Tidak butuh database server.
+- **Tanpa Framework** → Murni HTML, CSS, JS, gampang dipelajari.
+- **Gratis & Open Source** → Bebas diubah dan digunakan.
+- **Cocok untuk Pemula & Pro** → Bisa dipakai buat belajar atau proyek beneran.
+
+<br />
+
 ## 📜 Lisensi
 
-Proyek ini menggunakan MIT License. Bebas digunakan, dimodifikasi, dan didistribusikan dengan tetap mencantumkan kredit kepada pembuatnya.
+Proyek ini menggunakan [MIT License](https://github.com/eridz/oh-my-todo?tab=MIT-1-ov-file). Bebas digunakan, dimodifikasi, dan didistribusikan dengan tetap mencantumkan kredit kepada pembuatnya.
 
-📄 [Baca Lisensi MIT](https://eridz.github.io/oh-my-todo/)
+<br />
 
----
+## 💡 Jika ada pertanyaan, saran, atau masalah, silakan hubungi:
 
-## 📬 Kontak & Dukungan
-
-💡 Jika ada pertanyaan, saran, atau masalah, silakan hubungi:
-
-GitHub: github.com/eridz
-
+GitHub: github.com/eridz  
 Email: eridz.ufazy@gmail.com
 
 Jika kamu menyukai proyek ini, jangan lupa untuk memberi ⭐ (star) di repository ini! 🚀
+
+<br />
+
+> to-do list template, HTML CSS JS to-do list, open-source task manager, productivity web app, template daftar tugas, localStorage to-do list, JavaScript task tracker, UI to-do list template, lightweight to-do list app.
