@@ -4,11 +4,34 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./assets/css/index.css" />
-		<title>Oh My Todo</title>
+		<title>Oh My Todo - Template Website To-Do List</title>
+
+		<!-- SEO Optimization -->
+		<meta name="description" content="Oh My Todo adalah template website to-do list yang ringan dan modern. Cocok untuk proyek belajar dan pengembangan web." />
+		<meta name="keywords" content="to-do list website, JavaScript to-do list template, open-source task manager, to-do app template" />
+		<meta name="author" content="eridz ufazy" />
+		<link rel="canonical" href="https://eridz.github.io/oh-my-todo/" />
+
+		<!-- Open Graph for Social Media -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Oh My Todo - Template Website To-Do List" />
+		<meta property="og:description" content="Template website to-do list yang bisa langsung digunakan. Simpel dan modern." />
+		<meta property="og:image" content="https://eridz.github.io/oh-my-todo/screenshot/banner.jpg" />
+		<meta property="og:url" content="https://eridz.github.io/oh-my-todo/" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Oh My Todo - Template Website To-Do List" />
+		<meta name="twitter:description" content="Template website to-do list yang bisa langsung digunakan. Simpel dan modern." />
+		<meta name="twitter:image" content="https://eridz.github.io/oh-my-todo/screenshot/banner.jpg" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="./assets/images/favicon.png" />
 	</head>
 	<body>
 		<!-- greeting banner -->
 		<section class="banner">
+			<img src="./assets/images/bg.jpg" alt="" />
 			<div class="container">
 				<div class="theme-buttons"><button class="dark" id="darkBtn" value="dark"></button><button class="light" id="lightBtn" value="light"></button></div>
 				<div class="wrapper">
@@ -25,10 +48,10 @@
 				<div class="container">
 					<div class="wrapper">
 						<textarea id="inputTodoDetail" placeholder="Edit Your Todo."></textarea>
-						<button id="addToDoBtnDetail"><i class="fal fa-save"></i></button>
 					</div>
 					<div class="wrapper">
-						<input type="text" id="inputCategoryDetail" value="mancing" />
+						<input type="text" id="inputCategoryDetail" list="selectCategory" />
+						<button id="addToDoBtnDetail"><i class="fal fa-save"></i></button>
 					</div>
 					<label class="remind-me">
 						<input type="checkbox" id="remindMeDetail" />
@@ -98,11 +121,8 @@
 					<button id="addToDoBtn"><i class="fal fa-plus"></i></button>
 				</div>
 				<div class="wrapper">
-					<input type="text" id="inputCategory" value="mancing" />
-					<button id="addCategoryBtn">
-						category <i class="fal fa-list-dropdown"></i
-						><select id="selectCategory"></select>
-					</button>
+					<input type="text" id="inputCategory" value="mancing" list="selectCategory" />
+					<datalist id="selectCategory"> </datalist>
 				</div>
 				<label class="remind-me">
 					<input type="checkbox" id="remindMe" />
@@ -139,7 +159,7 @@
 			</div>
 		</section>
 		<footer>
-			<p>&copy; <span id="displayYear">2025</span> dedy yulianto & faridz fauzy</p>
+			<p>&copy; 2025 eridz ufazy</p>
 		</footer>
 	</body>
 	<script type="module" src="./assets/js/index.js"></script>

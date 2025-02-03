@@ -54,6 +54,6 @@ export function printDates(year, month, $targetParent) {
 	const overCalendar = getOverCalendar(year, month)
 
 	for (let i = 0; i < overCalendar.length; i++) {
-		$targetParent.innerHTML += `<label class="date ${overCalendar[i].thisMonth ? 'this-month' : null}">${overCalendar[i].date}<input type="radio" name="dates" hidden /></label>`
+		$targetParent.innerHTML += `<label class="date ${overCalendar[i].thisMonth ? 'this-month' : null}">${overCalendar[i].date}<input type="radio" name="date" hidden /></label>`
 	}
 }

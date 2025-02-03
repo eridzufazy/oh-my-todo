@@ -30,48 +30,42 @@
 			box-shadow:
 				-0.2rem -0.2rem 0.2rem var(--highlight),
 				0.2rem 0.2rem 0.2rem var(--shadow);
+		}
 
-			&:is([type='text']) {
-				height: var(--sz-menu);
-				text-overflow: ellipsis;
-				padding-inline: var(--padding-m);
-				width: 100%;
-				padding: var(--padding-l);
+		input[type='text'] {
+			height: var(--sz-menu);
+			text-overflow: ellipsis;
+			padding-inline: var(--padding-m);
+			width: 100%;
+			padding: var(--padding-l);
+		}
+
+		textarea {
+			text-overflow: ellipsis;
+			border: none;
+			min-height: var(--sz-menu);
+			width: 100%;
+			min-width: calc(100% - var(--sz-menu) - var(--gap-s));
+			max-width: calc(100% - var(--sz-menu) - var(--gap-s));
+			height: auto;
+			max-height: calc((var(--sz-menu) * 2) + (var(--padding-s)) + var(--gap-xs));
+			padding: var(--padding-s) var(--padding-l);
+			overflow: auto;
+
+			&:only-child {
+				min-width: 100%;
+				max-width: 100%;
 			}
+		}
 
-			&:is(textarea) {
-				text-overflow: ellipsis;
-				border: none;
-				width: 100%;
-				max-width: calc(100% - var(--sz-menu) - var(--gap-s));
-				height: auto;
-				max-height: calc((var(--sz-menu) * 2) + (var(--padding-s)) + var(--gap-xs));
-				padding: var(--padding-s) var(--padding-l);
-				overflow: auto;
-			}
-
-			&:is(button) {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: var(--gap-xs);
-				min-height: var(--sz-menu);
-				height: auto;
-				min-width: var(--sz-menu);
-			}
-
-			&:has(select) {
-				position: relative;
-				padding-inline: var(--padding-m);
-
-				:is(select) {
-					position: absolute;
-					display: block;
-					inset: 0;
-					overflow: hidden;
-					opacity: 0;
-				}
-			}
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: var(--gap-xs);
+			min-height: var(--sz-menu);
+			height: auto;
+			min-width: var(--sz-menu);
 		}
 	}
 

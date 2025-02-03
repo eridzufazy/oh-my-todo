@@ -18,6 +18,7 @@ body:has(#popUp #remindMeDetail:checked) #popUp .calendar {
 	display: none;
 
 	.input-todo {
+		position: relative;
 		margin: 0;
 		padding: var(--padding-l);
 		background: var(--bg-card);
@@ -27,7 +28,7 @@ body:has(#popUp #remindMeDetail:checked) #popUp .calendar {
 		max-width: var(--max-width);
 
 		.wrapper textarea {
-			max-height: calc((var(--sz-menu) * 6) + (var(--padding-s)) + var(--gap-xs));
+			max-height: calc(100dvh - var(--sz-menu) - (var(--padding-xl) * 2) - (var(--padding-l) * 2));
 		}
 	}
 }

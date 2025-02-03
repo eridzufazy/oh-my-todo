@@ -2,7 +2,7 @@
 import { addTodo, displayTodo } from './todo.js'
 import { changeTheme } from './theme.js'
 import { updateCategory } from './category.js'
-import { getCalendar, printDates } from './calender.js'
+import { getCalendar, printDates } from './calendar.js'
 import { typeWriter } from './typing-effect.js'
 
 // selector

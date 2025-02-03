@@ -3,13 +3,14 @@
 
 	--clr-base: light-dark(hsl(222, 47%, 100%), hsl(222, 47%, 11%));
 	--clr-accent: light-dark(hsl(217, 100%, 64%), hsl(217, 100%, 54%));
-	--clr-accent-secondary: light-dark(red, red);
 	--clr-accent-secondary: light-dark(hsl(40, 100%, 64%), hsl(40, 85%, 45%));
 	--clr-focus: color-mix(in oklab, var(--clr-accent-secondary) 60%, transparent);
+
 	--clr-line: light-dark(
 		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 90%, var(--clr-accent)) 90%, black),
 		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 90%, var(--clr-accent)) 90%, white)
 	);
+
 	--clr-shadow: light-dark(hsl(222, 25%, 70%), hsl(222, 50%, 20%));
 
 	--clr-error: light-dark(hsl(5, 100%, 49%), hsl(5, 100%, 54%));
@@ -20,39 +21,18 @@
 	--clr-text-disable: color-mix(in oklab, var(--clr-text) 60%, transparent);
 
 	--bg-main: light-dark(color-mix(in oklab, var(--clr-base) 95%, black), color-mix(in oklab, var(--clr-base) 65%, color-mix(in oklab, var(--clr-accent) 20%, black)));
+
 	--bg-topbar: light-dark(color-mix(in oklab, var(--bg-main) 35%, transparent), color-mix(in oklab, var(--bg-main) 35%, transparent));
+
 	--bg-sidebar: light-dark(
 		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 95%, var(--clr-accent)) 65%, transparent),
 		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 95%, var(--clr-accent)) 70%, transparent)
 	);
+
 	--bg-card: light-dark(color-mix(in oklab, var(--clr-base) 99%, var(--clr-accent)), color-mix(in oklab, var(--clr-base) 95%, white));
+
 	--bg-btn: var(--clr-accent);
 	--bg-btn-disable: color-mix(in oklab, var(--clr-accent) 40%, var(--bg-card));
 	--highlight: light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.15));
 	--shadow: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85));
-
-	/* Tema Ubuntu Modern untuk AI Assistant */
-	/* 
-  --clr-base: light-dark(hsl(222, 47%, 95%), hsl(222, 47%, 5%));
-  --clr-accent: light-dark(hsl(217, 100%, 64%), hsl(217, 100%, 54%));
-  --clr-accent-secondary: light-dark(hsl(340, 70%, 70%), hsl(340, 70%, 60%));
-  --clr-focus: color-mix(in oklab, var(--clr-accent-secondary) 70%, transparent);
-  --clr-line: light-dark(color-mix(in oklab, var(--clr-base) 92%, var(--clr-accent-secondary)), color-mix(in oklab, var(--clr-base), var(--accent-secondary)) 92%, white);
-  --clr-shadow: light-dark(hsl(220, 20%, 90%), hsl(220, 30%, 20%));
-
-  --clr-error: light-dark(hsl(5, 80%, 65%), hsl(5, 80%, 35%));
-  --clr-warning: light-dark(hsl(60, 70%, 60%), hsl(60, 70%, 30%));
-  --clr-success: light-dark(hsl(100, 70%, 65%), hsl(100, 70%, 35%));
-
-  --clr-text: light-dark(hsl(210, 5%, 10%), hsl(210, 5%, 90%));
-  --clr-text-disable: color-mix(in oklab, var(--clr-text) 70%, transparent);
-
-  --bg-main: light-dark(color-mix(in oklab, var(--clr-base) 98%, black), color-mix(in oklab, var(--clr-base) 90%, var(--clr-accent-secondary)));
-  --bg-topbar: light-dark(color-mix(in oklab, var(--bg-main) 80%, transparent), color-mix(in oklab, var(--bg-main) 10%, transparent));
-  --bg-sidebar: light-dark(color-mix(in oklab, var(--clr-base) 97%, var(--clr-accent)), color-mix(in oklab, var(--clr-base) 95%, var(--clr-accent)) 90%, transparent);
-  --bg-card: light-dark(color-mix(in oklab, var(--clr-base) 99%, var(--clr-accent)), color-mix(in oklab, var(--clr-base) 98%, var(--clr-accent-secondary)));
-  --bg-btn: linear-gradient(to bottom, var(--clr-accent), var(--clr-accent-secondary));
-  --bg-btn-disable: color-mix(in oklab, var(--clr-accent) 50%, var(--clr-base));
-  --highlight: light-dark(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
-  --shadow: light-dark(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)); */
 }

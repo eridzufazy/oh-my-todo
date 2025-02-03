@@ -1,5 +1,4 @@
 section.banner {
-	color: var(--clr-accent-secondary);
 	z-index: 0;
 	position: sticky;
 	top: 0;
@@ -8,10 +7,6 @@ section.banner {
 	border-top-left-radius: var(--border-radius-5xl);
 	border-top-right-radius: var(--border-radius-5xl);
 	background-color: var(--bg-card);
-	background-image: url('../images/bg.jpg');
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
 
 	&::before {
 		position: absolute;
@@ -25,29 +20,21 @@ section.banner {
 		background: var(--bg-main);
 	}
 
-	.theme-buttons {
-		padding: var(--padding-xxs);
-		display: flex;
-		gap: var(--gap-xxs);
+	& > img {
+		z-index: -1;
+		top: 0;
+		left: 0;
 		position: absolute;
-		top: var(--padding-xs);
-		right: var(--padding-xs);
-		border-radius: var(--border-radius-xxl);
-		opacity: 0.75;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		opacity: 0.5;
+		filter: brightness(80%) blur(0.1rem);
+	}
 
-		> * {
-			width: calc(var(--sz-menu) * 0.65);
-			aspect-ratio: 1;
-			border-radius: var(--border-radius-o);
-		}
-
-		.dark {
-			background: black;
-		}
-
-		.light {
-			background: white;
-		}
+	* {
+		text-shadow: 0 0 1em var(--bg-main);
 	}
 
 	.wrapper {
@@ -81,5 +68,30 @@ section.banner {
 		font-size: 0.7em;
 		text-transform: uppercase;
 		text-align: center;
+	}
+
+	.theme-buttons {
+		padding: var(--padding-xxs);
+		display: flex;
+		gap: var(--gap-xxs);
+		position: absolute;
+		top: var(--padding-xs);
+		right: var(--padding-xs);
+		border-radius: var(--border-radius-xxl);
+		opacity: 0.75;
+
+		> * {
+			width: calc(var(--sz-menu) * 0.65);
+			aspect-ratio: 1;
+			border-radius: var(--border-radius-o);
+		}
+
+		.dark {
+			background: black;
+		}
+
+		.light {
+			background: white;
+		}
 	}
 }
