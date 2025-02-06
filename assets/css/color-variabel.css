@@ -17,7 +17,7 @@
 	--clr-warning: light-dark(hsl(60, 100%, 49%), hsl(60, 100%, 54%));
 	--clr-success: light-dark(hsl(100, 100%, 49%), hsl(100, 100%, 54%));
 
-	--clr-text: light-dark(hsl(210, 0%, 15%), hsl(210, 0%, 80%));
+	--clr-text: light-dark(hsl(210, 0%, 5%), hsl(210, 0%, 100%));
 	--clr-text-disable: color-mix(in oklab, var(--clr-text) 60%, transparent);
 
 	--bg-main: light-dark(color-mix(in oklab, var(--clr-base) 95%, black), color-mix(in oklab, var(--clr-base) 65%, color-mix(in oklab, var(--clr-accent) 20%, black)));

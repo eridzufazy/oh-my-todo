@@ -26,6 +26,15 @@ printDates(2025, 3, $dates)
 // wait then run
 setTimeout(typeWriter, 2000)
 
-// console.log(getCalendar(2025, 2))
+// register service worker
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker
+			.register('assets/js/service-worker.js')
+			.then(reg => alert('Service Worker registered!', reg))
+			.catch(err => alert('Service Worker registration failed:', err))
+	})
+}
 
+// console.log(getCalendar(2025, 2))
 // console.log(howManyAgo(new Date('2025-01-25T22:00:00')))
