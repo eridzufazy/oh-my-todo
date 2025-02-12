@@ -13,7 +13,7 @@
 	font-family: inherit;
 }
 
-* {
+body {
 	font-family: 'Poppins';
 }
 
@@ -35,7 +35,7 @@ main {
 
 	::-webkit-scrollbar-thumb {
 		border-radius: var(--border-radius-xxs);
-		background: var(--clr-accent-secondary);
+		background: var(--clr-accent);
 	}
 }
 
@@ -53,5 +53,12 @@ main {
 
 @font-face {
 	font-family: 'Poppins';
+	font-weight: regular;
 	src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins';
+	font-weight: bold;
+	src: url(../fonts/Poppins-Bold.ttf);
 }

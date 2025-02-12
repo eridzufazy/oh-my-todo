@@ -3,6 +3,7 @@ section.to-do-list {
 	position: relative;
 	z-index: 2;
 	padding-inline: var(--padding-s);
+	margin-top: -50vh;
 
 	.container {
 		position: relative;
@@ -16,7 +17,7 @@ section.to-do-list {
 		border-radius: var(--border-radius-5xl);
 		overflow: hidden;
 		max-width: var(--__max-width);
-		border: 0.1rem solid color-mix(in oklab, var(--clr-text-disable) 15%, transparent);
+		border: 0.1rem solid color-mix(in oklab, var(--clr-line) 15%, transparent);
 
 		&::before {
 			z-index: 5;
@@ -41,7 +42,6 @@ section.to-do-list .todos {
 	padding-bottom: var(--padding-xl);
 	min-width: 100%;
 	overflow: auto;
-	color: var(--clr-text-disable);
 
 	.item-todo {
 		--__margin: calc(var(--gap-s) * 0.5);
@@ -49,25 +49,17 @@ section.to-do-list .todos {
 		--__opacity: 1;
 		width: 100%;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		gap: var(--gap-xs);
-		list-style: none;
-		padding: var(--__padding);
 		margin-block: var(--__margin);
-		cursor: pointer;
-		border-radius: var(--border-radius-xxl);
-		background: var(--bg-main);
-		transition:
-			all var(--duration-transition-xs) ease-out,
-			outline 0s ease,
-			color calc(var(--duration-transition-xxs) * 0.25) ease;
+		height: max-content;
 
-		&.new {
-			height: 0;
-			padding: 0;
-			opacity: 0;
-			margin: 0;
-			scale: 0.85;
+		&:not(:has(.new)) {
+			animation:
+				fade-in-block var(--duration-transition-s) ease,
+				fade-in-block ease;
+			animation-timeline: auto, view();
+			animation-range: entry cover 20%;
 		}
 
 		&.removed {
@@ -77,35 +69,112 @@ section.to-do-list .todos {
 			opacity: 0;
 			margin: 0;
 			scale: 0.85;
+		}
+
+		&.new {
+			height: 0;
+			padding: 0;
+			opacity: 0;
+			margin: 0;
+			scale: 0.85;
+		}
+
+		.wrapper:has(.todo) {
+			position: relative;
+			z-index: 9;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: var(--gap-xs);
+			padding: var(--__padding);
+			border-radius: var(--border-radius-xxl);
+			background: var(--bg-primary);
+			transition:
+				all var(--duration-transition-xs) ease-out,
+				outline 0s ease,
+				color calc(var(--duration-transition-xxs) * 0.25) ease;
+
+			input[type='checkbox'] {
+				margin-inline: var(--margin-xs);
+			}
 
 			.todo {
-				display: -webkit-box;
-				-webkit-line-clamp: 1;
+				text-align: left;
+				text-wrap: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: 100%;
 			}
 		}
 
-		&:not(.new) {
-			animation:
-				fade-in-block var(--duration-transition-s) ease,
-				fade-in-block ease;
-			animation-timeline: auto, view();
-			animation-range: entry cover 20%;
-		}
-
-		&:hover {
-			color: var(--clr-text);
-		}
-
-		input[type='checkbox'] {
-			margin-inline: var(--margin-xs);
-		}
-
-		.todo {
-			text-align: left;
-			text-wrap: nowrap;
+		.wrapper:has(.sub-task) {
+			--sz-menu: calc(1.5em + var(--padding-xs) * 2);
+			--shadow: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3));
+			--highlight: light-dark(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.15));
+			font-size: 0.8em;
+			width: calc(100% - var(--margin-xxs) * 2);
+			z-index: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+			border-bottom-left-radius: var(--border-radius-l);
+			border-bottom-right-radius: var(--border-radius-l);
+			box-shadow: inset 0 1.5rem 1rem -1rem var(--shadow);
+			padding-inline: var(--padding-xxs);
+			padding-block: var(--padding-xs) var(--padding-xxs);
+			margin-block: calc(var(--padding-m) * -1) var(--margin-xxs);
+			height: 0;
 			overflow: hidden;
-			text-overflow: ellipsis;
-			width: 100%;
+			outline: 0.1rem solid color-mix(in oklab, var(--clr-text) 25%, transparent);
+			background: var(--clr-accent);
+			transition:
+				gap var(--duration-transition-s) ease-in-out,
+				height var(--duration-transition-s) ease-in-out,
+				padding var(--duration-transition-s) ease-in-out;
+
+			&.active {
+				padding-block: var(--padding-xl) var(--padding-xs);
+				gap: var(--gap-xxs);
+				height: auto;
+			}
+
+			.sub-task {
+				display: flex;
+				align-items: center;
+				gap: var(--gap-s);
+				border-radius: var(--border-radius-m);
+				width: 100%;
+				min-height: 0;
+				padding-inline: var(--padding-xs);
+
+				[type='checkbox']:checked ~ .sub-task-todo {
+					text-decoration: line-through;
+				}
+
+				.sub-task-todo {
+					width: 100%;
+					min-height: calc(var(--sz-menu) + var(--padding-xs));
+					padding: var(--padding-s) var(--padding-l);
+					background: var(--bg-card);
+					border-radius: var(--border-radius-l);
+					box-shadow:
+						-0.2rem -0.2rem 0.2rem var(--highlight),
+						0.2rem 0.2rem 0.2rem var(--shadow);
+
+					p {
+						display: -webkit-box;
+						-webkit-line-clamp: 4;
+						-webkit-box-orient: vertical;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+
+			&:not(:has(> *)) {
+				padding: 0;
+				margin-bottom: var(--margin-xxs);
+			}
 		}
 
 		.grup-buttons {
@@ -113,14 +182,15 @@ section.to-do-list .todos {
 			gap: var(--gap-s);
 			list-style: none;
 
-			> * {
+			button {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: var(--sz-menu);
+				min-width: var(--sz-menu);
+				padding: var(--padding-s);
 				aspect-ratio: 1;
 				border-radius: var(--border-radius-l);
-				background: var(--bg-card);
+				background: var(--bg-card-transparent);
 				transition-duration: calc(var(--duration-transition-xxs) * 0.5);
 
 				&:hover {
@@ -130,7 +200,7 @@ section.to-do-list .todos {
 		}
 	}
 
-	.item-todo:has(:checked) {
+	.item-todo:has(.check-todo:checked) {
 		--__opacity: 0.4;
 		opacity: var(--__opacity);
 
@@ -149,13 +219,12 @@ section.to-do-list .category-filter {
 	padding: var(--padding-m);
 	height: auto;
 	overflow: auto;
-	color: var(--clr-text-disable);
 
 	> * {
 		--__clr-text: var(--clr-text);
 		position: relative;
 		display: block;
-		background: var(--bg-main);
+		background: var(--bg-primary);
 		padding: var(--padding-xs) var(--padding-s);
 		border-radius: var(--border-radius-m);
 		text-wrap: nowrap;
@@ -178,16 +247,16 @@ section.to-do-list .category-filter {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: var(--bg-main);
-			background: var(--clr-accent-secondary);
+			color: var(--bg-primary);
+			background: var(--clr-accent);
 			border-radius: var(--border-radius-o);
 			font-size: 0.7em;
-			color: light-dark(var(--clr-text), var(--bg-main));
+			color: light-dark(var(--clr-text), var(--bg-primary));
 		}
 
 		&.active {
-			--__clr-text: light-dark(var(--clr-text), var(--bg-main));
-			background: var(--clr-accent-secondary);
+			--__clr-text: light-dark(var(--clr-text), var(--bg-primary));
+			background: var(--clr-accent);
 			color: var(--__clr-text);
 
 			&:hover {
@@ -196,7 +265,7 @@ section.to-do-list .category-filter {
 		}
 
 		&:hover {
-			color: light-dark(var(--clr-text), var(--clr-accent-secondary));
+			color: light-dark(var(--clr-text), var(--clr-accent));
 		}
 	}
 }

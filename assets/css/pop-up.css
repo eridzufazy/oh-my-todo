@@ -1,10 +1,11 @@
-body:has(#popUp #remindMeDetail:checked) #popUp .calendar {
-	height: max-content;
-	padding: var(--padding-xs);
+body:has(#remindMeEdit:checked) .input-todo .wrapper:has(#remindMeEdit) > div {
+	box-shadow:
+		-0.2rem -0.2rem 0.2rem var(--highlight),
+		0.2rem 0.2rem 0.2rem var(--shadow);
 	opacity: 1;
 }
 
-#popUp {
+.pop-up {
 	position: fixed;
 	z-index: 99999;
 	inset: 0;
@@ -15,17 +16,34 @@ body:has(#popUp #remindMeDetail:checked) #popUp .calendar {
 	padding-top: var(--padding-xl);
 	background: var(--bg-topbar);
 	backdrop-filter: blur(0.3rem);
-	display: none;
+
+	.footer {
+		background: light-dark(var(--bg-topbar), var(--bg-primary));
+		margin-inline: calc(var(--margin-l) * -1);
+		margin-bottom: calc(var(--margin-l) * -1);
+		padding: var(--padding-m) var(--padding-xl);
+		padding-top: 0;
+		color: var(--clr-text-disable);
+
+		* {
+			font-size: 0.5em;
+			background: none;
+			box-shadow: none;
+		}
+	}
 
 	.input-todo {
 		position: relative;
 		margin: 0;
-		padding: var(--padding-l);
-		background: var(--bg-card);
-		border-radius: var(--border-radius-5xl);
-		border: 0.1rem solid color-mix(in oklab, var(--clr-text-disable) 15%, transparent);
+		padding: 0;
 		width: 90%;
 		max-width: var(--max-width);
+		border: 0.1rem solid color-mix(in oklab, var(--clr-text-disable) 15%, transparent);
+		background: var(--bg-card);
+
+		.container {
+			max-height: calc(100dvh - var(--padding-xl) * 2) !important;
+		}
 
 		.wrapper textarea {
 			max-height: calc(100dvh - var(--sz-menu) - (var(--padding-xl) * 2) - (var(--padding-l) * 2));

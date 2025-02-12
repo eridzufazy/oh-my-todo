@@ -42,107 +42,26 @@
 			</div>
 		</section>
 
-		<!-- pop up -->
-		<section id="popUp">
-			<div class="input-todo">
-				<div class="container">
-					<div class="wrapper">
-						<textarea id="inputTodoDetail" placeholder="Edit Your Todo."></textarea>
-					</div>
-					<div class="wrapper">
-						<input type="text" id="inputCategoryDetail" list="selectCategory" />
-						<button id="addToDoBtnDetail"><i class="fal fa-save"></i></button>
-					</div>
-					<label class="remind-me">
-						<input type="checkbox" id="remindMeDetail" />
-						remind me
-					</label>
-					<div class="calendar">
-						<div>
-							<span class="month">januuary</span>
-							<span class="year">2025</span>
-						</div>
-						<div class="weeks">
-							<span>sun</span>
-							<span>mon</span>
-							<span>tue</span>
-							<span>wed</span>
-							<span>thu</span>
-							<span>fri</span>
-							<span>sat</span>
-						</div>
-						<div class="dates">
-							<label class="date">28<input type="radio" name="dates" hidden /></label>
-							<label class="date">29<input type="radio" name="dates" hidden /></label>
-							<label class="date">30<input type="radio" name="dates" hidden /></label>
-							<label class="date">1<input type="radio" name="dates" hidden /></label>
-							<label class="date">2<input type="radio" name="dates" hidden /></label>
-							<label class="date">3<input type="radio" name="dates" hidden /></label>
-							<label class="date">4<input type="radio" name="dates" hidden /></label>
-							<label class="date">5<input type="radio" name="dates" hidden /></label>
-							<label class="date">6<input type="radio" name="dates" hidden /></label>
-							<label class="date">7<input type="radio" name="dates" hidden /></label>
-							<label class="date">8<input type="radio" name="dates" hidden /></label>
-							<label class="date">9<input type="radio" name="dates" hidden /></label>
-							<label class="date">10<input type="radio" name="dates" hidden /></label>
-							<label class="date">11<input type="radio" name="dates" hidden /></label>
-							<label class="date">12<input type="radio" name="dates" hidden /></label>
-							<label class="date">13<input type="radio" name="dates" hidden /></label>
-							<label class="date">14<input type="radio" name="dates" hidden /></label>
-							<label class="date">15<input type="radio" name="dates" hidden /></label>
-							<label class="date">16<input type="radio" name="dates" hidden /></label>
-							<label class="date">17<input type="radio" name="dates" hidden /></label>
-							<label class="date">18<input type="radio" name="dates" hidden /></label>
-							<label class="date">19<input type="radio" name="dates" hidden /></label>
-							<label class="date">20<input type="radio" name="dates" hidden /></label>
-							<label class="date">21<input type="radio" name="dates" hidden /></label>
-							<label class="date">22<input type="radio" name="dates" hidden /></label>
-							<label class="date">23<input type="radio" name="dates" hidden /></label>
-							<label class="date">24<input type="radio" name="dates" hidden /></label>
-							<label class="date">25<input type="radio" name="dates" hidden /></label>
-							<label class="date">26<input type="radio" name="dates" hidden /></label>
-							<label class="date">27<input type="radio" name="dates" hidden /></label>
-							<label class="date">28<input type="radio" name="dates" hidden /></label>
-							<label class="date">29<input type="radio" name="dates" hidden /></label>
-							<label class="date">30<input type="radio" name="dates" hidden /></label>
-							<label class="date">1<input type="radio" name="dates" hidden /></label>
-							<label class="date">2<input type="radio" name="dates" hidden /></label>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- input to do list -->
 		<header class="input-todo">
 			<div class="container">
 				<div class="wrapper">
-					<textarea id="inputTodo" placeholder="Add Your Todo."></textarea>
+					<textarea id="inputTodo" placeholder="add your todo."></textarea>
 					<button id="addToDoBtn"><i class="fal fa-plus"></i></button>
 				</div>
 				<div class="wrapper">
-					<input type="text" id="inputCategory" value="mancing" list="selectCategory" />
+					<input type="text" id="inputCategory" placeholder="category" list="selectCategory" />
 					<datalist id="selectCategory"> </datalist>
 				</div>
-				<label class="remind-me">
-					<input type="checkbox" id="remindMe" />
-					remind me
-				</label>
-				<div class="calendar">
+				<div class="wrapper">
+					<label class="remind-me">
+						<input type="checkbox" id="remindMe" />
+						remind me
+					</label>
 					<div>
-						<span class="month">januuary</span>
-						<span class="year">2025</span>
+						<input type="date" name="inputDate" id="inputDate" value="" />
+						<input type="time" name="inputTime" id="inputTime" value="" />
 					</div>
-					<div class="weeks">
-						<span>sun</span>
-						<span>mon</span>
-						<span>tue</span>
-						<span>wed</span>
-						<span>thu</span>
-						<span>fri</span>
-						<span>sat</span>
-					</div>
-					<div translate="no" class="dates" id="dates"></div>
 				</div>
 			</div>
 		</header>

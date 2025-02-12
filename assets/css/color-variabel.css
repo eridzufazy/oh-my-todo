@@ -1,38 +1,60 @@
 :root {
-	color-scheme: light dark;
+  /* Menentukan skema warna untuk mode light dan dark */
+  color-scheme: light dark;
 
-	--clr-base: light-dark(hsl(222, 47%, 100%), hsl(222, 47%, 11%));
-	--clr-accent: light-dark(hsl(217, 100%, 64%), hsl(217, 100%, 54%));
-	--clr-accent-secondary: light-dark(hsl(40, 100%, 64%), hsl(40, 85%, 45%));
-	--clr-focus: color-mix(in oklab, var(--clr-accent-secondary) 60%, transparent);
+  /* Base color: digunakan sebagai dasar untuk background dan elemen lainnya */
+  --clr-base: light-dark(
+    hsl(210, 20%, 98%),  /* Light: sangat terang */
+    hsl(210, 40%, 15%)   /* Dark: cukup gelap */
+  );
 
-	--clr-line: light-dark(
-		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 90%, var(--clr-accent)) 90%, black),
-		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 90%, var(--clr-accent)) 90%, white)
-	);
+  /* Accent color: diubah menjadi ungu soft */
+  --clr-accent: light-dark(
+    hsl(280, 20%, 65%),  /* Light: ungu lembut, tidak terlalu mencolok */
+    hsl(280, 20%, 55%)   /* Dark: sedikit lebih gelap agar tetap harmonis */
+  );
 
-	--clr-shadow: light-dark(hsl(222, 25%, 70%), hsl(222, 50%, 20%));
+  /* Accent secondary: versi sedikit lebih saturasi untuk aksen tambahan */
+  --clr-accent-secondary: light-dark(
+    hsl(280, 30%, 70%),  /* Light: ungu dengan sentuhan ekstra kehangatan */
+    hsl(280, 30%, 50%)   /* Dark: lebih gelap, namun tetap dalam palet ungu */
+  );
 
-	--clr-error: light-dark(hsl(5, 100%, 49%), hsl(5, 100%, 54%));
-	--clr-warning: light-dark(hsl(60, 100%, 49%), hsl(60, 100%, 54%));
-	--clr-success: light-dark(hsl(100, 100%, 49%), hsl(100, 100%, 54%));
+  /* Focus: mengombinasikan accent dengan transparansi untuk elemen fokus */
+  --clr-focus: color-mix(in oklab, var(--clr-accent) 60%, transparent);
 
-	--clr-text: light-dark(hsl(210, 0%, 5%), hsl(210, 0%, 100%));
-	--clr-text-disable: color-mix(in oklab, var(--clr-text) 60%, transparent);
+  /* Text color: disesuaikan agar tetap kontras dengan background */
+  --clr-text: light-dark(
+    hsl(210, 10%, 10%),  /* Light: sangat gelap (hampir hitam) */
+    hsl(210, 10%, 90%)   /* Dark: sangat terang (hampir putih) */
+  );
+  --clr-text-disable: color-mix(in oklab, var(--clr-text) 40%, transparent);
+  --clr-line: color-mix(in oklab, var(--clr-text) 70%, transparent);
 
-	--bg-main: light-dark(color-mix(in oklab, var(--clr-base) 95%, black), color-mix(in oklab, var(--clr-base) 65%, color-mix(in oklab, var(--clr-accent) 20%, black)));
+  /* Background utama */
+  --bg-primary: light-dark(
+    color-mix(in oklab, var(--clr-base) 97%, black),
+    /* Untuk dark theme, bisa dibuat lebih gelap agar konten lebih kontras */
+    color-mix(in oklab, var(--clr-base) 70%, color-mix(in oklab, var(--clr-accent-secondary) 25%, black))
+  );
+  --bg-primary-transparent: color-mix(in oklab, var(--bg-primary) 40%, transparent);
 
-	--bg-topbar: light-dark(color-mix(in oklab, var(--bg-main) 35%, transparent), color-mix(in oklab, var(--bg-main) 35%, transparent));
+  /* Background untuk kartu atau elemen yang berdiri sendiri */
+  --bg-card: light-dark(
+    hsl(210, 30%, 89%),  /* Light: warna card yang terang */
+    color-mix(in oklab, var(--clr-base) 85%, white)
+  );
+  --bg-card-transparent: color-mix(in oklab, var(--bg-card), transparent);
 
-	--bg-sidebar: light-dark(
-		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 95%, var(--clr-accent)) 65%, transparent),
-		color-mix(in oklab, color-mix(in oklab, var(--clr-base) 95%, var(--clr-accent)) 70%, transparent)
-	);
+  /* Highlight: untuk elemen interaktif atau saat hover */
+  --highlight: light-dark(
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.15)
+  );
 
-	--bg-card: light-dark(color-mix(in oklab, var(--clr-base) 99%, var(--clr-accent)), color-mix(in oklab, var(--clr-base) 95%, white));
-
-	--bg-btn: var(--clr-accent);
-	--bg-btn-disable: color-mix(in oklab, var(--clr-accent) 40%, var(--bg-card));
-	--highlight: light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.15));
-	--shadow: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85));
+  /* Shadow: untuk bayangan lembut */
+  --shadow: light-dark(
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.65)
+  );
 }

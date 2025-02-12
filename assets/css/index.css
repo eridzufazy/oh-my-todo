@@ -5,7 +5,7 @@
 @import url(pop-up.css);
 
 body {
-	background: var(--bg-main);
+	background: var(--bg-primary);
 	color: var(--clr-text);
 }
 

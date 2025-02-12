@@ -38,3 +38,27 @@ export function howManyAgo(timeBegin) {
 	else if (seconds > 0) return `${seconds} second${plural(seconds)} ago`
 	else return 'just now'
 }
+
+export function printToday($targetParent) {
+	let today = new Date()
+	let date = today.getDate()
+	let month = today.toLocaleString('en-US', { month: 'long' })
+	let year = today.getFullYear()
+
+	$targetParent.innerHTML = `${month} ${date} ${year}`
+}
+
+export function printGreeting($targetParent) {
+	let clock = new Date().getHours()
+	let greeting = 'good '
+
+	if (clock < 5) greeting += 'Midnight'
+	else if (clock < 6) greeting += 'Early Morning'
+	else if (clock < 12) greeting += 'Morning'
+	else if (clock < 15) greeting += 'Afternoon'
+	else if (clock < 18) greeting += 'Late Afternoon'
+	else if (clock < 20) greeting += 'Evening'
+	else if (clock < 24) greeting += 'Night'
+
+	$targetParent.innerHTML = greeting
+}

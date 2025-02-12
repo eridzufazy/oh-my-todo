@@ -30,7 +30,7 @@ export function updateCategory(newFilterName) {
 	dataCategory.forEach(item => {
 		// create innerHTML content
 		const option = `<option value="${item}">${item}</option>`
-		const filter = `<button value="${item}">${item}</button>`
+		const filter = `<button value="${item.toLowerCase()}">${item}</button>`
 
 		// if category have child, append child (using +=, bacause option is note elemen) else asiggn (=)
 		$selectCategory.innerHTML ? ($selectCategory.innerHTML += option) : ($selectCategory.innerHTML = option)

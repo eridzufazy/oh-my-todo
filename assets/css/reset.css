@@ -10,10 +10,10 @@
 	box-sizing: border-box;
 
 	transition:
-		background var(--duration-transition-xs) ease,
-		color var(--duration-transition-xs) ease,
-		opacity var(--duration-transition-xs) ease,
-		box-shadow var(--duration-transition-xs) ease;
+		background 500ms ease,
+		color 500ms ease,
+		opacity 500ms ease,
+		box-shadow 500ms ease;
 }
 
 html,
@@ -27,7 +27,7 @@ body > * {
 }
 
 input {
-	accent-color: var(--clr-accent-secondary);
+	accent-color: var(--clr-accent);
 }
 
 textarea,
