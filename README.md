@@ -10,7 +10,7 @@
 
 ## 🚀 **Demo & Live Preview**
 
-🔗 [Lihat Demo di Sini](https://eridz.github.io/oh-my-todo/)
+🔗 [Lihat Demo di Sini](https://eridzufazy.github.io/oh-my-todo/)
 
 <!--![Oh My Todo](https://eridz.github.io/oh-my-todo/screenshot/banner.jpg)-->
 
@@ -40,7 +40,7 @@
   git clone https://github.com/eridz/oh-my-todo.git
 ```
 
-atau download sebagai [ZIP](https://github.com/eridz/oh-my-todo/archive/refs/heads/main.zip) dari GitHub.
+atau download sebagai [ZIP](https://github.com/eridzufazy/oh-my-todo/archive/refs/heads/main.zip) dari GitHub.
 
 ### **2. Buka folder di kode editor**
 
@@ -121,7 +121,7 @@ oh-my-todo/
 
 ## 📜 Lisensi
 
-Proyek ini menggunakan [MIT License](https://github.com/eridz/oh-my-todo?tab=MIT-1-ov-file). Bebas digunakan, dimodifikasi, dan didistribusikan dengan tetap mencantumkan kredit kepada pembuatnya.
+Proyek ini menggunakan [MIT License](https://github.com/eridzufazy/oh-my-todo?tab=MIT-1-ov-file). Bebas digunakan, dimodifikasi, dan didistribusikan dengan tetap mencantumkan kredit kepada pembuatnya.
 
 <br />
 
