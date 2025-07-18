@@ -1,4 +1,4 @@
-# 📝 Oh My Todo - Template Website To-Do List
+# 📝 Oh My Todo - Template Website To-Do List by Eridz Ufazy
 
 **Oh My To-Do** adalah template **website to-do list open-source** berbasis HTML, CSS, dan JavaScript.
 
