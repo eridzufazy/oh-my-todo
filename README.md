@@ -128,6 +128,7 @@ Proyek ini menggunakan [MIT License](https://github.com/eridzufazy/oh-my-todo?ta
 ## 💡 Jika ada pertanyaan, saran, atau masalah, silakan hubungi:
 
 GitHub: [github.com/eridzufazy](https://github.com/eridzufazy)
+
 Email: eridz.ufazy@gmail.com
 
 Jika kamu menyukai proyek ini, jangan lupa untuk memberi ⭐ (star) di repository ini! 🚀
